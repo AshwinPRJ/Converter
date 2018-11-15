@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Connection settings -->
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Testing1408</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+		<property name="hibernate.connection.pool_size">999</property>
+		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<!-- <property name="hbm2ddl.auto">update</property> -->
+
+		<!-- Configure second level cache -->
+
+		<!-- <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property> 
+			<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property> 
+			<property name="hibernate.cache.use_second_level_cache">true</property> <property 
+			name="hibernate.cache.use_query_cache">true</property> <property name="net.sf.ehcache.configurationResourceName">/myehcache.xml</property> -->
+		<!-- Print executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Annotated entity classes -->
+		<!-- Accounts Package Bean Classes -->
+		<mapping class="com.vyavharamitra.unitofmeasurement.bean.UnitOfMeasurementBean" />
+		<mapping class="com.vyavharamitra.unitofmeasurement.bean.VendorMasterBean" />
+		<mapping class="com.vyavharamitra.unitofmeasurement.bean.CustomerBean" />
+		<mapping class="com.vyavharamitra.deletionofbill.bean.DeleteBillBean" />
+		<mapping class="com.vyavharamitra.deletionofbill.bean.DeleteSellitemBean" />
+		<mapping class="com.vyavharamitra.unitofmeasurement.bean.PurchaseBillBean" />
+		<mapping class="com.vyavharamitra.unitofmeasurement.bean.PurchasedItemBean"/>
+		<mapping class="com.vyavharamitra.categoryofitem.bean.CategoryOfItemBean" />
+		<mapping class="com.vyavharamitra.organization.bean.OrganizationMasterBean" />
+		<mapping class="com.vyavharamitra.greetings.beans.GreetingsBean" />
+		<mapping class="com.vyavharamitra.dealer.bean.DealerRegisterBean" />
+		<mapping class="com.vyavharamitra.dealerkeygeneration.bean.DealerKeyGenerationBean" />
+		<mapping class="com.vyavharamitra.usercreation.bean.UserCreationBean" />
+		<mapping class="com.vyavharamitra.itemdetails.beans.ItemMasterBean" />
+		<mapping class="com.vyavharamitra.categoryofitem.bean.DeleteCategoryOfItemBean" />
+		<mapping class="com.vyavharamitra.greetings.beans.BranchBean" />
+		<mapping class="com.vyavharamitra.itemdetails.beans.DeleteItemMasterBean" />
+		<mapping class="com.vyavharamitra.itemdetails.beans.UpdateItemMasterBean" />
+		<mapping class="com.vyavharamitra.categoryofitem.bean.UpdateCategoryOfItemBean" />
+		<mapping class="com.vyavharamitra.organization.bean.BillVocherGenerationBean" />
+		<mapping class="com.vyavharamitra.organization.bean.ItemVocherGenerationBean" />
+		<mapping class="com.vyavharamitra.dealerkeygeneration.bean.DealerEncyKeyGenerationBean" />
+		<mapping class="com.vyavharamitra.cashsales.beans.CashSalesBean" />
+		<mapping class="com.vyavharamitra.cashsales.beans.CashSalesLineBean" />
+		<mapping class="com.vyavharamitra.cashsales.beans.CashSalesHelper" />
+		<mapping class="com.vyavharamitra.categoryofitem.bean.CategoryHelper" />
+	<!-- 	<mapping class="com.vyavharamitra.unitofmeasurement.bean.ModifyPurchaseBillBean"/>
+		<mapping class="com.vyavharamitra.unitofmeasurement.bean.DelPurchaseBillBean"/> -->
+		<mapping class="com.vyavharamitra.vyavaharamenus.bean.VyavaharaMenuBean" />
+		<mapping class="com.vyavharamitra.organization.bean.OrganizationLogoBean" />
+		
+	</session-factory>
+</hibernate-configuration>
